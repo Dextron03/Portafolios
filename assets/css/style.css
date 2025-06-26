@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
-    --color-texto: #000
+    --color-texto: #000;
+    --sub-titulos:rgb(224, 202, 76);
+    --iconos:#f2f1f1;
 }
 
 *{
@@ -7,8 +12,36 @@
     margin: 0;
 }
 
+
+body::-webkit-scrollbar {
+  width: 5px;  /* ancho para scroll vertical */
+  height: 12px; /* alto para scroll horizontal */
+}
+
+/* Track: fondo de la barra */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Thumb: la parte que se mueve */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Al pasar el mouse por encima */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+body{
+    background: linear-gradient(90deg, #000, #aaa6a6);
+}
+
 .menu{
-    background-color: brown;
     width: 100%;
     height: 15vh;
     padding: 10px;
@@ -59,29 +92,28 @@ ul li .enlaces {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .iconos i {
     font-size: 25px;
-    color: aliceblue;
+    color: var(--iconos);
 }
 
 .container-about-me{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: relative;
-    background-color: blueviolet;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px 50px;
+    gap: 75px 50px;
 }
 
 .box-description {
     width: 50%;
     height: 60vh;
-    background-color: brown;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,7 +124,6 @@ ul li .enlaces {
     width: 30%;
     height: 67vh;
     border-radius: 50%;
-    background-color: aliceblue;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -102,21 +133,26 @@ ul li .enlaces {
 .profile {
     width: 100%;
     height: 81vh;
+    object-fit: contain;
 }
 
 .carrera{
-    font-size: 55px;
-    color: rgb(224, 202, 76);
+    font-size: 50px;
+    color: var(--sub-titulos);
+    font-family: 'poppins', sans-serif;
 }
 
 .nombre {
-    font-size: 70px;
+    font-size: 65px;
     color: aliceblue;
+    margin-top: -20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .box-description p {
     color: aliceblue;   
     margin: 10px;
+    font-family: 'Consolas', monospace;
 }
 
 .botones-sociales {
@@ -134,7 +170,8 @@ ul li .enlaces {
     height: 7vh;
     color: aliceblue;
     background-color: rgb(28, 44, 44);
-    border-radius: 25%;
+    font-family: 'Consolas', monospace;
+    border-radius: 20px;
     font-size: 15px;
     text-decoration: none;
     display: flex;
@@ -158,11 +195,24 @@ ul li .enlaces {
 }
 
 .about-me {
-    width: 84%;
-    padding: 10px;
+    width: 70%;
+    padding: 20px;
     color: aliceblue;
-    background-color: rgb(36, 40, 44);
-    border: 3px solid rgb(79, 84, 90);
-    box-sizing: border-box;
-    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+/*     background-color: rgb(36, 40, 44);
+    border: 3px solid rgb(79, 84, 90); */
+    box-sizing: border-box;   
 }
+
+.about-me h2 {
+    margin-bottom: 10px;
+    color: var(--sub-titulos);
+    font-family: 'poppins', sans-serif;
+}
+
+.about-me p{
+    
+    font-family: 'Consolas', monospace;
+}
+
