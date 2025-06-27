@@ -12,7 +12,6 @@
     margin: 0;
 }
 
-
 body::-webkit-scrollbar {
   width: 5px;  /* ancho para scroll vertical */
   height: 12px; /* alto para scroll horizontal */
@@ -35,25 +34,34 @@ body::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
 body{
     background: linear-gradient(90deg, #000, #aaa6a6);
 }
 
-.menu{
+.menu {
     width: 100%;
     height: 15vh;
     padding: 10px;
     position: fixed;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px 300px;
-    background-color: rgba(255, 255, 255, 0.068); /* Fondo semitransparente si quieres */
-    backdrop-filter: blur(5px); /* efecto de desenfoque */
+    background-color: rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(5px);
     z-index: 1;
 }
 
@@ -105,14 +113,14 @@ ul li .enlaces {
 
 .container-about-me{
     width: 100%;
-    height: 100vh;
-    position: relative;
-    top: 70px;
+    height: auto;
+    margin-top: 17vh;
+    top: 17vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 75px 50px;
+    gap: 0 50px;
 }
 
 .box-description {
@@ -204,8 +212,7 @@ ul li .enlaces {
     color: aliceblue;
     display: flex;
     flex-direction: column;
-/*     background-color: rgb(36, 40, 44);
-    border: 3px solid rgb(79, 84, 90); */
+    align-items: center;
     box-sizing: border-box;   
 }
 
@@ -216,7 +223,93 @@ ul li .enlaces {
 }
 
 .about-me p{
-    
     font-family: 'Consolas', monospace;
+}
+
+.container-proyectos {
+    width: 60%;
+    height: 70vh;
+    padding: 20px;
+    box-sizing: content-box;
+    background: #555;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.tl-proyecto{
+    font-family: 'poppins', sans-serif;
+    align-self: center;
+    color: var(--sub-titulos);
+}
+
+.projects-card{
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.projects-card img {
+    width: 35%;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    background: #a14e4e;
+}
+
+.info {
+    width: 65%;
+    height: 100%;
+    padding: 10px;
+    padding-left: 70px;
+    background: #f2f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 20px 0;
+}
+
+.tecnologias {
+    width: 90%;
+    height: 10%;
+    background: #a14e4e;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.btn-links-proyectos{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: end;   
+    gap: 20px;
+}
+
+.btn-info-pr{
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    text-decoration: none;
+    background: #a14e4e;
+    color: #f1f1f1;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-back,
+.btn-next{
+    width: 10%;
+    background: none;
+    border: none;
+    font-size: 4rem;
 }
 
