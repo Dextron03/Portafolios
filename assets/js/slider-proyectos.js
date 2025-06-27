@@ -3,7 +3,7 @@ const $btnBack = document.querySelector(".btn-back"),
     $cards = document.querySelectorAll(".projects-card[data-index]");
 
     
-export const pasarSliceD = () => {
+export const pasarSlice = () => {
     document.addEventListener("click", e => {
         if(e.target === $btnNext || e.target.matches(".fa-arrow-right")){
             $cards.forEach(slice => {
