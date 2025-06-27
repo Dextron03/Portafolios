@@ -5,6 +5,8 @@
     --color-texto: #000;
     --sub-titulos:rgb(224, 202, 76);
     --iconos:#f2f1f1;
+    --body-color:linear-gradient(90deg, #000, #aaa6a6);
+    --background-card:linear-gradient(90deg, #c7c0c0, #5c3b3b);
 }
 
 *{
@@ -12,24 +14,25 @@
     margin: 0;
 }
 
-body::-webkit-scrollbar {
-  width: 5px;  /* ancho para scroll vertical */
-  height: 12px; /* alto para scroll horizontal */
+html{
+    scroll-behavior: smooth;
 }
 
-/* Track: fondo de la barra */
+body::-webkit-scrollbar {
+  width: 5px;  
+  height: 12px;
+}
+
 body::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 10px;
 }
 
-/* Thumb: la parte que se mueve */
 body::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
 }
 
-/* Al pasar el mouse por encima */
 body::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -44,7 +47,7 @@ main {
 
 
 body{
-    background: linear-gradient(90deg, #000, #aaa6a6);
+    background: var(--body-color);
 }
 
 .menu {
@@ -130,6 +133,7 @@ ul li .enlaces {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .container-profile{
@@ -227,56 +231,65 @@ ul li .enlaces {
 }
 
 .container-proyectos {
-    width: 60%;
-    height: 70vh;
-    padding: 20px;
-    box-sizing: content-box;
-    background: #555;
-    display: flex;
-    justify-content: space-between;
-
+  position: relative;
+  width: 60%;
+  height: 70vh;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tl-proyecto{
     font-family: 'poppins', sans-serif;
     align-self: center;
     color: var(--sub-titulos);
+    margin-top: 100px;
 }
 
-.projects-card{
-    width: 90%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+.projects-card {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  background: var(--background-card);
+  border-radius: 10px 0 0 10px;
 }
 
 
 .projects-card img {
-    width: 35%;
-    height: 100%;
-    border-radius: 5px 0 0 5px;
-    background: #a14e4e;
+  width: 35%;
+  height: 100%; 
+  object-fit: cover;
+  background: #a14e4e;
+  border-radius: 10px 0 0 10px;
 }
 
 .info {
-    width: 65%;
-    height: 100%;
-    padding: 10px;
-    padding-left: 70px;
-    background: #f2f1f1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    box-sizing: border-box;
-    gap: 20px 0;
+  width: 65%;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.info p {
+    color: var(--iconos);
+    font-size: 15px;
+    padding-left: 10%;
+    font-family: 'Consolas', monospace;
 }
 
 .tecnologias {
     width: 90%;
-    height: 10%;
+    height: 50%;
     background: #a14e4e;
     align-self: flex-end;
     display: flex;
@@ -286,30 +299,62 @@ ul li .enlaces {
 
 .btn-links-proyectos{
     width: 100%;
-    height: 10%;
+    height: 40%;
     display: flex;
     justify-content: end;   
     gap: 20px;
 }
 
 .btn-info-pr{
-    width: 20%;
+    width: 35%;
     height: 100%;
     border-radius: 20px;
+    padding: 3px;
     text-decoration: none;
-    background: #a14e4e;
-    color: #f1f1f1;
+    background: #a14e4e4e;
+    color: var(--iconos);
     font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.btn-back,
-.btn-next{
-    width: 10%;
-    background: none;
-    border: none;
-    font-size: 4rem;
+.btn-nt-bk {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
 }
 
+.btn-back,
+.btn-next {
+  width: 10%;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-back:hover,
+.btn-next:hover {
+  background: rgba(237, 233, 233, 0.06);
+  transform: scale(1.1) translateY(-2px);
+}
+
+.projects-card[data-index="0"] {
+  transform: translate(0, 0) scale(1);
+  z-index: 3;
+}
+
+.projects-card[data-index="1"] {
+  transform: translate(20px, 20px) scale(0.98);
+  z-index: 2;
+}
+
+.projects-card[data-index="2"] {
+  transform: translate(40px, 40px) scale(0.96);
+  z-index: 1;
+}

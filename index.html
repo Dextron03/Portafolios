@@ -16,7 +16,7 @@
 
             <ul class="container-enlaces">
                 <li><a href="#inicio" class="enlaces">Inicio</a></li>
-                <li><a href="#" class="enlaces">Proyectos</a></li>
+                <li><a href="#proyectos" class="enlaces">Proyectos</a></li>
                 <li><a href="#" class="enlaces">Experiencia</a></li>
                 <li><a href="#" class="enlaces">Tecnologias</a></li>
             </ul>
@@ -52,12 +52,16 @@
             </section>
         </section>
 
-        <h2 class="tl-proyecto">Proyectos</h2>
+        <h2 class="tl-proyecto" id="proyectos">Proyectos</h2>
         <section class="container-proyectos">
-            <button  type="button" class="btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+            
+            <section class="btn-nt-bk">
+                <button  type="button" class="btn-back"><i class="fa-solid fa-arrow-left"></i></button>
+                <button type="button" class="btn-next"><i class="fa-solid fa-arrow-right"></i></button>
+            </section>
 
-            <section class="projects-card">
-                <img src="https://i.pravatar.cc/300" alt="...">
+            <section class="projects-card" data-index="0">
+                <img src="./assets/img/slice.jpg" alt="...">
                 <section class="info">
                     <section class="tecnologias"></section>
                     <h3>Titulo</h3>
@@ -69,8 +73,33 @@
                 </section>
             </section>
             
-            <button type="button" class="btn-next"><i class="fa-solid fa-arrow-right"></i></button>
+            <section class="projects-card" data-index="1">
+                <img src="assets/img/slice1.jpg" alt="...">
+                <section class="info">
+                    <section class="tecnologias"></section>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo architecto nostrum assumenda, in temporibus quis omnis cupiditate minus quam perspiciatis totam quas officiis dolorem voluptas accusantium fugiat nulla consequatur soluta excepturi odio minima recusandae aliquid vel ullam. Earum, exercitationem veniam ab quas recusandae eaque minima, consectetur quod ad placeat asperiores!</p>
+                    <section class="btn-links-proyectos">
+                        <a href="#" class="btn-info-pr"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="#" class="btn-info-pr"><i class="fa-solid fa-link"></i></a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="projects-card" data-index="2">
+                <img src="https://i.pravatar.cc/300" alt="...">
+                <section class="info">
+                    <section class="tecnologias"></section>
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo architecto nostrum assumenda, in temporibus quis omnis cupiditate minus quam perspiciatis totam quas officiis dolorem voluptas accusantium fugiat nulla consequatur soluta excepturi odio minima recusandae aliquid vel ullam. Earum, exercitationem veniam ab quas recusandae eaque minima, consectetur quod ad placeat asperiores!</p>
+                    <section class="btn-links-proyectos">
+                        <a href="#" class="btn-info-pr"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="#" class="btn-info-pr"><i class="fa-solid fa-link"></i></a>
+                    </section>
+                </section>
+            </section>
         </section>
+
     </main>
 </body>
 </html>
