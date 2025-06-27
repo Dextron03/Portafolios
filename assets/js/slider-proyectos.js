@@ -11,13 +11,18 @@ export const pasarSliceD = () => {
 
                 if(slice.dataset.index > 2){
                     slice.dataset.index = 0;
-                    console.log(slice.dataset.index)
                 }
             })
         }
 
         if(e.target === $btnBack || e.target.matches(".fa-arrow-left")){
+            $cards.forEach(slice => {
+                slice.dataset.index--;
 
+                if(slice.dataset.index < 0){
+                    slice.dataset.index = 2;
+                }
+            })
         }
 
 
