@@ -1,6 +1,6 @@
-const $btnBack = document.querySelector(".btn-back"),
-    $btnNext = document.querySelector(".btn-next"),
-    $cards = document.querySelectorAll(".projects-card[data-index]");
+const $btnBack = document.querySelector(".btn-next-project"),
+    $btnNext = document.querySelector(".btn-prev-project"),
+    $cards = document.querySelectorAll(".project-card[data-index]");
 
 export const pasarSlice = () => {
     document.addEventListener("click", e => {

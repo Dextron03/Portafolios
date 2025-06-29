@@ -6,7 +6,8 @@
     --sub-titulos:rgb(224, 202, 76);
     --iconos:#f2f1f1;
     --body-color:linear-gradient(90deg, #000, #aaa6a6);
-    --background-card:linear-gradient(90deg, #c7c0c0, #5c3b3b);
+    --background-card-experiencia:linear-gradient(90deg, #ffffff4c, #1a1010);
+    --background-card-proyectos:#3e385e;
 }
 
 *{
@@ -45,12 +46,11 @@ main {
 
 }
 
-
 body{
     background: var(--body-color);
 }
 
-.menu {
+.navbar {
     width: 100%;
     height: 15vh;
     padding: 10px;
@@ -68,7 +68,7 @@ body{
     z-index: 4;
 }
 
-.logo{
+.navbar-logo{
     width: 10%;
     height: 13vh;
     display: flex;
@@ -76,7 +76,7 @@ body{
     align-items: center;
 }
 
-.img-logo{
+.logo-img{
     width: 70%;
     height: 13vh;
 }
@@ -94,12 +94,12 @@ ul li {
     list-style: none;
 }
 
-ul li .enlaces {
+ul li .nav-link {
     text-decoration: none;
     color: aliceblue;
 }
 
-.iconos {
+.social-icons {
     width: 10%;
     height: 10vh;
     display: flex;
@@ -109,12 +109,12 @@ ul li .enlaces {
     
 }
 
-.iconos i {
+.social-icons i {
     font-size: 25px;
     color: var(--iconos);
 }
 
-.container-about-me{
+.about-section{
     width: 100%;
     height: auto;
     margin-top: 17vh;
@@ -126,7 +126,7 @@ ul li .enlaces {
     gap: 0 50px;
 }
 
-.box-description {
+.about-content {
     width: 50%;
     height: 60vh;
     display: flex;
@@ -136,7 +136,7 @@ ul li .enlaces {
     margin-bottom: 50px;
 }
 
-.container-profile{
+.profile-img-image-wrapper{
     width: 30%;
     height: 67vh;
     border-radius: 50%;
@@ -146,32 +146,32 @@ ul li .enlaces {
     justify-content: center;
 }
 
-.profile {
+.profile-img {
     width: 100%;
     height: 81vh;
     object-fit: contain;
 }
 
-.carrera{
+.role-title{
     font-size: 50px;
     color: var(--sub-titulos);
     font-family: 'poppins', sans-serif;
 }
 
-.nombre {
+.full-name {
     font-size: 65px;
     color: aliceblue;
     margin-top: -20px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.box-description p {
+.about-content p {
     color: aliceblue;   
     margin: 10px;
     font-family: 'Consolas', monospace;
 }
 
-.botones-sociales {
+.social-buttons {
     width: 40%;
     height: 10vh;
     display: flex;
@@ -181,7 +181,7 @@ ul li .enlaces {
     gap: 30px;
 }
 
-.btn-redes {
+.btn-social {
     width: 50%;
     height: 7vh;
     color: aliceblue;
@@ -196,7 +196,7 @@ ul li .enlaces {
     gap: 10px;
 }
 
-.btn-dowmload{
+.btn-download-cv{
     width: 25%;
     height: 6vh;
     border-radius: 5px; 
@@ -210,7 +210,7 @@ ul li .enlaces {
     gap: 5px;  
 }
 
-.about-me {
+.about-text {
     width: 70%;
     padding: 20px;
     color: aliceblue;
@@ -227,11 +227,11 @@ ul li .enlaces {
     margin-top: 50px;
 }
 
-.about-me p{
+.about-text p{
     font-family: 'Consolas', monospace;
 }
 
-.container-proyectos {
+.projects-section {
   position: relative;
   width: 60%;
   height: 70vh;
@@ -248,7 +248,7 @@ ul li .enlaces {
     margin-top: 100px;
 }
 
-.projects-card {
+.project-card {
   position: absolute;
   width: 80%;
   height: 100%;
@@ -256,20 +256,23 @@ ul li .enlaces {
   flex-direction: row;
   transition: transform 0.4s ease, opacity 0.4s ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  background: var(--background-card);
+  background: var(--background-card-proyectos);
   border-radius: 10px 0 0 10px;
 }
 
 
-.projects-card img {
+.project-card img {
   width: 35%;
   height: 100%; 
-  object-fit: cover;
-  background: #a14e4e;
+  object-fit: fill;
   border-radius: 10px 0 0 10px;
 }
 
-.info {
+.tech-stack img {
+    width: 50%;
+}
+
+.project-info {
   width: 65%;
   padding: 20px 30px;
   display: flex;
@@ -281,24 +284,29 @@ ul li .enlaces {
   overflow-y: auto;
 }
 
-.info p {
+.project-info p {
     color: var(--iconos);
     font-size: 15px;
     padding-left: 10%;
     font-family: 'Consolas', monospace;
 }
 
-.tecnologias {
+.project-info h3 {
+    color: #f1f1f1;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+}
+
+.tech-stack {
     width: 90%;
     height: 50%;
-    background: #a14e4e;
     align-self: flex-end;
     display: flex;
     align-items: center;
     justify-content: end;
 }
 
-.btn-links-proyectos{
+.project-links{
     width: 100%;
     height: 40%;
     display: flex;
@@ -306,7 +314,7 @@ ul li .enlaces {
     gap: 20px;
 }
 
-.btn-info-pr{
+.btn-project-link{
     width: 35%;
     height: 100%;
     border-radius: 20px;
@@ -320,16 +328,16 @@ ul li .enlaces {
     align-items: center;
 }
 
-.btn-nt-bk {
+.projects-nav-controls {
     width: 100%;
-    height: 90%;
+    height: 50%;
     display: flex;
     justify-content: space-between;
     z-index: 5;
 }
 
-.btn-back,
-.btn-next {
+.btn-prev-project,
+.btn-next-project {
   width: 10%;
   background: none;
   border: none;
@@ -339,28 +347,47 @@ ul li .enlaces {
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.btn-back:hover,
-.btn-next:hover {
+.btn-prev-project:hover,
+.btn-next-project:hover {
   background: rgba(237, 233, 233, 0.06);
   transform: scale(1.1) translateY(-2px);
 }
 
-.projects-card[data-index="0"] {
+.project-card[data-index="0"] {
   transform: translate(0, 0) scale(1);
   z-index: 3;
 }
 
-.projects-card[data-index="1"] {
+.project-card[data-index="1"] {
   transform: translate(20px, 20px) scale(0.98);
   z-index: 2;
 }
 
-.projects-card[data-index="2"] {
+.project-card[data-index="2"] {
   transform: translate(40px, 40px) scale(0.96);
   z-index: 1;
 }
 
-.container-skills {
+.project-info::-webkit-scrollbar {
+  width: 4px;
+}
+
+.project-info::-webkit-scrollbar-track {
+  background: #2e2e2e;
+  border-radius: 10px;
+}
+
+.project-info::-webkit-scrollbar-thumb {
+  background-color: #e0ca4c; 
+  border-radius: 10px;
+  border: 1px solid #3e385e; 
+}
+
+.project-info::-webkit-scrollbar-thumb:hover {
+  background-color: #f1df6d;
+}
+
+.skills-section {
     width: 50%;
     height: 40rem;
     padding: 20px;
@@ -372,7 +399,7 @@ ul li .enlaces {
     gap: 0 40px;
 }
 
-.item-skills {
+.skill-category {
     width: 45%;
     height: 40%;
     background: #9c9cc023;
@@ -381,16 +408,124 @@ ul li .enlaces {
     text-align: center;
 }
 
-.item-skills img {
+.skill-category img {
     width: 20%;
     margin-top: 10px;
 }
 
-.item-skills h3 {
+.skill-category h3 {
     color: var(--sub-titulos);
     font: 25px;
     font-family: 'poppins', sans-serif;
     margin-bottom: 10px;
     margin-top: 10px;
+}
 
+.experience-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-entry {
+  width: 70%;
+  background: var(--background-card);
+  color: var(--iconos);
+  padding: 20px 25px;
+  border-radius: 15px;
+  font-family: 'Consolas', monospace;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.experience-summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  color: var(--sub-titulos);
+  position: relative;
+  padding-right: 25px;
+}
+
+.experience-summary img.experience-logo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.info-exp {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-exp h3 {
+  font-size: 18px;
+  margin: 0;
+  color: var(--sub-titulos);
+}
+
+.experience-date {
+  font-size: 14px;
+  color: #ccc;
+  font-family: 'Consolas', monospace;
+  margin-top: 2px;
+}
+
+.experience-summary::marker {
+  content: "";
+}
+
+.experience-entry summary::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  color: var(--sub-titulos);
+  font-size: 18px;
+}
+
+.experience-entry[open] summary::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.experience-description {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.experience-description p {
+  color: aliceblue;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: 'Consolas', monospace;
+  align-self: flex-start;
+}
+
+.experience-description ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.experience-description li {
+    width: 100px;
+    margin-bottom: 8px;
+    padding: 10px;
+    background: #f0ecec0c;
+    color: #f1f1f1;
+    font-size: 14px;
 }
