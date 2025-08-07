@@ -1,0 +1,82 @@
+{
+    "fullName": "Braily Roman",
+    "position":"Software Developer",
+    "stack": "Full Stack React & ASP.NET",
+    "redSocial": {
+        "linkedin": "https://www.linkedin.com/in/braily-roman-seberino-30b461264/",
+        "github": "https://github.com/Dextron03"
+    },
+    "profileImg": "./assets/img/profile.png",
+    "aboutMe": "Soy desarrollador backend con 2 años de experiencia, especializado en C# y ASP.NET para crear soluciones escalables y eficientes. También tengo experiencia con Python y Django, además del manejo de bases de datos relacionales y la dockerización de aplicaciones. Me adapto rápidamente a nuevas tecnologías y entornos de desarrollo.",
+    "experience": [
+        {
+            "experienceLogo": "assets/img/logo-policia.webp",
+            "title": "Soporte TI - Pasante",
+            "date": "8/2022 - 3/2023",
+            "description": "<p>Desarrollé habilidades clave que contribuyeron significativamente al funcionamiento eficiente de la infraestructura tecnológica. Entre las tareas que realicé se incluyen:</p><ul><li>Configuración y optimización de redes virtuales privadas (VPNs) para garantizar la seguridad y conectividad eficiente</li><li>Implementación y mantenimiento de infraestructuras de cableado de red, asegurando un desempeño confiable y de alta velocidad.</li><li>Identificación y resolución ágil de errores en el paquete Office, mejorando la productividad y eficacia en el entorno laboral.</li><li>Ejecución de reparaciones precisas en computadoras e impresoras, minimizando los tiempos de inactividad y restaurando la funcionalidad óptima.</li><li>Instalación y configuración experta de equipos tecnológicos adaptados a necesidades específicas, garantizando su pleno rendimiento en actividades concretas.</li></ul>"
+        }
+    ],
+    "projects": [
+      {
+        "logo": "assets/img/social-network.png",
+        "title": "Red-Social-Django",
+        "description": "¡Bienvenidos al proyecto Social NetWork con Django! En este proyecto, he desarrollado una plataforma de redes sociales robusta y dinámica utilizando el potente framework Django. Nuestra meta principal ha sido crear un espacio interactivo donde los usuarios puedan compartir sus pensamientos, interactuar con sus amigos y mantenerse conectados de manera efectiva.",
+        "links": [
+          {
+            "github": "https://github.com/Dextron03/Red-Social-Django",
+            "page": null
+          }
+        ]
+      },
+      {
+        "logo": "assets/img/rw.png",
+        "title": "RecycleWise",
+        "description": "RecycleWise es una aplicación web basada en Django que tiene como objetivo mejorar los esfuerzos de reciclaje en todo el mundo. Mediante la integración de algoritmos de machine learning, nuestro proyecto ofrece un sistema de detección inteligente que identifica con precisión varios tipos de materiales reciclables a partir de video en tiempo real.",
+        "links": [
+          {
+            "github": "https://github.com/Dextron03/recycle-wise",
+            "page": null
+          }
+        ]
+      },
+      {
+        "logo": "assets/img/proyecto01.png",
+        "title": "Encriptado-de-texto-ONE-G6",
+        "description": "Oracle Next Education (ONE), en colaboración con Alura Latam, presenta el desafío 'Encriptador de Texto'. Este desafío invita a los participantes a explorar el poder de JavaScript para crear un inscriptor de texto único. Imagina un mundo donde cada palabra se transforma en una experiencia visual y sonora única. Los participantes deberán demostrar su creatividad y destreza técnica para diseñar un inscriptor innovador que lleve la programación a nuevas alturas.",
+        "links": [
+          {
+            "github": "https://github.com/Dextron03/Encriptado-de-texto-ONE-G6",
+            "page": "https://dextron03.github.io/Encriptado-de-texto-ONE-G6/"
+          }
+        ]
+      }
+    ],
+    "skills":{
+        "backend":{
+                "csharp":"./img/DeviconCsharp.svg",
+                "python":"./img/LogosPython.svg",
+                "django":"./img/SkillIconsDjango.svg",
+                "net":"./img/LogosDotnet.svg"
+        },
+        "frontend":{
+                "javaScript":"./img/DeviconJavascript.svg",
+                "css":"./img/MaterialIconThemeCss.svg",
+                "html":"./img/SkillIconsHtml.svg"
+        },
+        "tools":{
+            "sqlserver":"./img/DeviconMicrosoftsqlserver.svg",
+            "github":"./img/FluentMdl2GitHubLogo.svg",
+            "docker":"./img/SkillIconsDocker.svg",
+            "git":"./img/SkillIconsGit.svg",
+            "sqlite":"./img/VscodeIconsFileTypeSqlite.svg",
+            "wordpress":"./img/SkillIconsWordpress.svg"
+        },
+        "soon":{
+            "postgres":"./img/VscodeIconsFileTypePgsql.svg",
+            "react":"./img/LogosReact.svg",
+            "typescript":"./img/DeviconTypescript.svg",
+            "node":"./img/LogosNodejs.svg"
+        }
+    }
+    
+}
