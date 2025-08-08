@@ -39,12 +39,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -54,6 +48,11 @@ main {
 
 body{
     background: var(--body-color);
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .navbar {
