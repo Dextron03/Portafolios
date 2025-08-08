@@ -42,6 +42,7 @@ body::-webkit-scrollbar-thumb:hover {
 body{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 main {
@@ -344,6 +345,7 @@ ul li .nav-link {
 .btn-prev-project,
 .btn-next-project {
   width: 10%;
+  height: 100vh;
   background: none;
   border: none;
   font-size: 2rem;
@@ -679,6 +681,8 @@ ul li .nav-link {
 
 /* Móvil */
 @media (max-width: 480px) { 
+  /* ... (todas tus reglas anteriores) ... */
+
   .navbar {
     position: fixed;
     top: -100vh; /* oculto arriba */
@@ -788,13 +792,53 @@ ul li .nav-link {
   }
 
   .footer{
-    width: 91%;
+    width: 90%;
     height: 30vh;
     display:flex;
     justify-content: center;
     flex-direction: column-reverse;
     padding: 1rem;
     margin-top: 25rem;
+  }
+
+  /* --- REGLA AÑADIDA --- */
+  /* Oculta la descripción del proyecto en móviles */
+  .project-card .project-info p {
+    display: none;
+  }
+
+  .project-card {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .project-card img{
+    width: 100%;
+  }
+
+  .project-info {
+    width: 100%;
+  }
+
+  .projects-section{
+    width: 90%;
+  }
+
+  .experience-entry {
+      width: 85%; /* Ajustamos el ancho del contenedor principal de la experiencia */
+  }
+
+  .experience-description ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 👈 Crea 2 columnas de igual tamaño */
+      gap: 1rem; /* Espacio entre los elementos de la lista */
+      width: 100%;
+      padding: 0; /* Quitamos el padding por defecto para alinear mejor */
+  }
+
+  .experience-description li {
+      width: 100%; /* Hacemos que cada 'li' ocupe su columna */
+      margin: 0; /* El 'gap' ya se encarga del espaciado */
   }
 }
 
