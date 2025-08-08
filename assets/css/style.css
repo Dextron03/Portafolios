@@ -700,16 +700,20 @@ ul li .nav-link {
   }
 
   .panel-btn, .hamburger {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 20;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-  }
+      position: fixed;
+      z-index: 20;
+      bottom: 1rem;
+      right: 1rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.068);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
 
   .navbar-logo{
@@ -737,8 +741,6 @@ ul li .nav-link {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    top: 35rem;
-    right: 1rem;
   }
 
     .hamburger .hamburger-inner,
