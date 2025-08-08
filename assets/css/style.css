@@ -891,10 +891,45 @@ ul li .nav-link {
     padding: 0.5rem;
   }
 
+  .role-title {
+    font-size: 3.5rem; /* Reduce el tamaño del título "Software Developer" */
+    text-align: center;
+  }
+
+  .full-name {
+    font-size: 2.5rem;
+    text-align: center; 
+    line-height: 1.2;
+  }
+
+  .about-content {
+      width: 90%;
+  }
 
 }
 
 /* Tablet */
 @media (min-width: 481px) and (max-width: 768px) { 
 
+}
+
+.full-name {
+    font-size: 70px;
+    position: relative; 
+}
+
+.full-name::after {
+    content: '|';
+    color: var(--sub-titulos); /* Usa el color amarillo de tus subtítulos */
+    font-weight: 200; /* Hace el cursor un poco más delgado */
+    display: inline-block;
+    animation: blink-cursor 1s infinite;
+}
+
+/* Keyframes para el parpadeo */
+@keyframes blink-cursor {
+    0% { opacity: 1; }
+    49% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
 }
