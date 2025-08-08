@@ -825,7 +825,7 @@ ul li .nav-link {
   }
 
   .experience-entry {
-      width: 85%; /* Ajustamos el ancho del contenedor principal de la experiencia */
+      width: 80%; /* Ajustamos el ancho del contenedor principal de la experiencia */
   }
 
   .experience-description ul {
@@ -837,7 +837,7 @@ ul li .nav-link {
   }
 
   .experience-description li {
-      width: 100%; /* Hacemos que cada 'li' ocupe su columna */
+      width: 60%; /* Hacemos que cada 'li' ocupe su columna */
       margin: 0; /* El 'gap' ya se encarga del espaciado */
   }
 }
