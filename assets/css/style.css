@@ -736,6 +736,16 @@ ul li .nav-link {
     flex-direction: column;
   }
 
+  .social-icons  {
+    width: 50%;
+    height: 20vh;
+  
+  }
+
+  .social-icons a i{
+    font-size: 60px;
+  }
+
   .panel-btn{
     background: rgba(255, 255, 255, 0.068);
     width: 20%;
@@ -834,7 +844,7 @@ ul li .nav-link {
   }
   
   .sub-titulos{
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   .project-card img{
